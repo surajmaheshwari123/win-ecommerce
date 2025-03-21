@@ -1,6 +1,6 @@
 const Joi = require("joi");
 const variantSchema = Joi.object({
-    product_id: Joi.number().integer(),  
+    product_id: Joi.number().integer().required(),
     name: Joi.string().min(3).max(100).optional(),  
     mrp: Joi.number().positive().required(),  
     discount_price: Joi.number().positive().optional(),
@@ -17,7 +17,7 @@ const productSchema = Joi.object({
     discount_price: Joi.number().positive().optional(),
     size: Joi.string().optional(),
     color: Joi.string().optional(),
-    variants: Joi.array().items(variantSchema).optional()
+    variants: Joi.array().optional()
 });
 
 const categorySchema = Joi.object({

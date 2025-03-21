@@ -2,6 +2,7 @@ const Joi = require("joi");
 
 const productSchema = Joi.object({
     name: Joi.string().min(3).max(100).required(),
+    description: Joi.string().min(3).max(100),
     discount_price: Joi.number().positive().optional(),
     size: Joi.string().optional(),
     color: Joi.string().optional()

@@ -20,7 +20,7 @@ exports.getAllProducts = async () => {
 };
 
 // Create a new product
-exports.createProduct = async (name, description, image_url, category_id, variants) => {
+exports.createProduct = async (name, description, image_url = null, category_id, variants) => {
     const trx = await knexSqlDb.transaction();
     try {
         const [product] = await trx('products')

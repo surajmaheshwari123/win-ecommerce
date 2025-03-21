@@ -11,7 +11,7 @@ const options = {
     },
     servers: [
       {
-        url: "http://localhost:4002/apis",
+        url: "http://13.61.152.150:4002/apis",
         description: "Local server",
       },
     ],
@@ -23,7 +23,7 @@ const swaggerSpec = swaggerJsDoc(options);
 
 const swaggerDocs = (app, port) => {
   app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
-  console.log(`Swagger UI available at http://localhost:${port}/api-docs`);
+  console.log(`Swagger UI available at http://13.61.152.150:${port}/api-docs`);
 };
 
 module.exports = swaggerDocs;

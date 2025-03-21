@@ -1,5 +1,5 @@
 const logger = require("../logger/winston.logger");
-const { ApiResponse } =  require("../utils/apiresponse");
+const { ApiResponse } =  require("../utils/apiResponse");
 const { createProduct, getAllProducts, deleteProduct, updateProduct } =  require('../service/productService.js');
 
 

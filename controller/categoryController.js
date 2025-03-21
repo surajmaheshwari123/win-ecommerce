@@ -1,5 +1,5 @@
 const { getAllCategoriesData ,addCategory, getCategoryById, updateCategory, deleteCategoryById} = require("../service/categoryService");
-const { ApiResponse } = require("../utils/apiresponse");
+const { ApiResponse } = require("../utils/apiResponse");
 const logger = require("../logger/winston.logger");
 const addCategoryController = async (req, res) => {
     try {

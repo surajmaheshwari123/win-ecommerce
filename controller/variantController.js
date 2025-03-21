@@ -4,7 +4,7 @@ const {
     updateVariant, 
     softDeleteVariant 
 } =  require('../service/variantService.js');
-const { ApiResponse } =  require("../utils/apiresponse");
+const { ApiResponse } =  require("../utils/apiResponse");
 const logger = require("../logger/winston.logger");
 
 // Get all variants that are not soft deleted

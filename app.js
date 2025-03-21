@@ -21,10 +21,6 @@ app.use(morganMiddleware);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 app.use(cookieParser());
-app.use(cors({
-    methods: "GET,POST,PUT,DELETE",
-    credentials: true
-}));
 
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutes

@@ -10,10 +10,10 @@ const options = {
       description: "API documentation using Swagger",
     },
     servers: [
-      {
-        url: "http://13.61.152.150:4002/apis",
-        description: "Local server",
-      },
+        {
+            url: "http://13.61.152.150:4002/api-docs",
+            description: "Live Server",
+          },
     ],
   },
   apis: ["./routes/*.js"],  // Path to API route files

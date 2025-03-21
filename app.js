@@ -1,4 +1,4 @@
- require("newrelic");
+require("newrelic");
 require("dotenv").config();
 const express = require("express");
 const app = express();
@@ -10,6 +10,9 @@ const cookieParser = require("cookie-parser");
 const  morganMiddleware  = require("./logger/morgan.logger");
 const router = express.Router()
 const db = require("./db/postgre");
+const swaggerDocs = require("./swagger");
+const port = process.env.PORT || 4002;
+swaggerDocs(app, port); // Initialize Swagger
 
 global.knexSqlDb = db;
 
